@@ -2,8 +2,13 @@ NAME = fractol
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g
-LFLAGS = -Llibft -O2 -lft -lm -lmlx -framework OpenGL -framework AppKit 
+LFLAGS = -Llibft -L./minilibx-linux/ -O2 -lft -lm -lmlx -lXext -lX11
 SRCS = srcs/main.c \
+       srcs/hook.c \
+       srcs/mandelbrot.c \
+       srcs/julia.c \
+       srcs/utils.c \
+       srcs/burning.c 
 
 OBJS = $(SRCS:.c=.o)
 
@@ -33,3 +38,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+
