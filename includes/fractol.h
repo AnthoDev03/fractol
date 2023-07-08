@@ -3,11 +3,11 @@
 
 # include "libft.h"
 # include <stdlib.h>
-# include "../minilibx_opengl_20191021/mlx.h"
+# include "../minilibx-linux/mlx.h"
 # include "math.h"
 # include "pthread.h"
 
-# define WIDTH 600
+# define WIDTH 900
 # define THREAD_WIDTH 5
 # define THREAD_NUMBER 120
 
