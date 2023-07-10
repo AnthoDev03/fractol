@@ -35,7 +35,7 @@ void	mlx_win_init(t_fractol *data)
 			&data->bpp, &data->sl, &data->endian);
 }
 
-int		fract_comp(char **av, t_fractol *data)
+int	fract_comp(char **av, t_fractol *data)
 {
 	if (ft_strncmp(av[1], "mandelbrot", 10) == 0)
 		data->fract = 0;
@@ -45,17 +45,19 @@ int		fract_comp(char **av, t_fractol *data)
 		data->fract = 2;
 	else
 	{
-		write(1,"Usage : ./fractol \"mandelbrot\", \"julia\", \"burningship\"", 54);
+		write(1, "Usage : ./fractol \"mandelbrot\", \"julia\", \"burningship\"",
+			54);
 		return (0);
 	}
 	return (1);
 }
 
-int		main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	t_fractol	*data;
 
-	if (!(data = (t_fractol *)malloc(sizeof(t_fractol))))
+	data = (t_fractol *)malloc(sizeof(t_fractol));
+	if (!data)
 		return (-1);
 	if (ac == 2)
 	{
@@ -69,7 +71,8 @@ int		main(int ac, char **av)
 		mlx_mouse_hook(data->win, mouse_hook, data);
 		mlx_loop(data->mlx);
 	}
-	else 
-		write(1,"Usage : ./fractol \"mandelbrot\", \"julia\", \"burningship\"", 54);
+	else
+		write(1, "Usage : ./fractol \"mandelbrot\", \"julia\", \"burningship\"",
+			54);
 	return (0);
 }
