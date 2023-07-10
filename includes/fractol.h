@@ -6,7 +6,7 @@
 /*   By: anthrodr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 15:05:09 by anthrodr          #+#    #+#             */
-/*   Updated: 2023/07/10 15:05:12 by anthrodr         ###   ########.fr       */
+/*   Updated: 2023/07/10 16:55:54 by anthrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@
 # include "libft.h"
 # include <stdlib.h>
 # include "../minilibx-linux/mlx.h"
-# include "math.h"
-# include "pthread.h"
-
-# define WIDTH 900
+# include <math.h>
+# include <pthread.h>
+# define WIDTH 600
 # define THREAD_WIDTH 5
 # define THREAD_NUMBER 120
 

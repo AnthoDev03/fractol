@@ -6,11 +6,12 @@
 /*   By: anthrodr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 15:04:20 by anthrodr          #+#    #+#             */
-/*   Updated: 2023/07/10 15:04:22 by anthrodr         ###   ########.fr       */
+/*   Updated: 2023/07/10 16:51:50 by anthrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
+#include <pthread.h>
 
 void	burningship_init(t_fractol *data)
 {

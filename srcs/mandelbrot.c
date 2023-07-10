@@ -6,11 +6,13 @@
 /*   By: anthrodr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 15:04:45 by anthrodr          #+#    #+#             */
-/*   Updated: 2023/07/10 15:04:46 by anthrodr         ###   ########.fr       */
+/*   Updated: 2023/07/10 16:52:43 by anthrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
+       #include <pthread.h>
+
 
 void	mandelbrot_init(t_fractol *data)
 {

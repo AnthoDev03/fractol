@@ -2,7 +2,7 @@ NAME = fractol
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g
-LFLAGS = -Llibft -L./minilibx-linux/ -O2 -lft -lm -lmlx -lXext -lX11
+LFLAGS = -Llibft -L./minilibx-linux/ -O2 -lft -lm -lmlx -lXext -lX11 -lpthread 
 SRCS = srcs/main.c \
        srcs/hook.c \
        srcs/mandelbrot.c \

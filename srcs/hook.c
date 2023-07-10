@@ -6,7 +6,7 @@
 /*   By: anthrodr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 15:04:27 by anthrodr          #+#    #+#             */
-/*   Updated: 2023/07/10 15:04:28 by anthrodr         ###   ########.fr       */
+/*   Updated: 2023/07/10 17:22:44 by anthrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,26 +29,26 @@ int	key_hook2(int keycode, t_fractol *data)
 
 int	key_hook(int keycode, t_fractol *data)
 {
-	if (keycode == 27) // Touche 'Escape' pour quitter le programme
+	if (keycode == 65307) // Touche 'Escape' pour quitter le programme
 		exit(1);
-	else if (keycode == 43)
+	else if (keycode == 65451)
 		// Touche '+' pour augmenter la valeur de data->it_max de 50
 		data->it_max += 50;
-	else if (keycode == 110)
+	else if (keycode == 65453)
 		// Touche '-' pour diminuer la valeur de data->it_max de 50
 		data->it_max -= 50;
-	else if (keycode == 39) // Touche '<-' pour déplacer data->x1 vers la gauche
+	else if (keycode == 65430) // Touche '<-' pour déplacer data->x1 vers la gauche
 		data->x1 -= 30 / data->zoom;
-	else if (keycode == 37) // Touche '->' pour déplacer data->x1 vers la droite
+	else if (keycode == 65363) // Touche '->' pour déplacer data->x1 vers la droite
 		data->x1 += 30 / data->zoom;
 	else if (keycode == 40)
 		// Touche 'fleceh bas' pour déplacer data->y1 vers le bas
 		data->y1 += 30 / data->zoom;
-	else if (keycode == 38) // Touche '^' pour déplacer data->y1 vers le haut
+	else if (keycode == 65431) // Touche '^' pour déplacer data->y1 vers le haut
 		data->y1 -= 30 / data->zoom;
 	else if (keycode == 49) // Touche '1' pour réinitialiser le fractal
 		fract_init(data);
-	else if (keycode == 89) // Touche 'y' pour modifier la couleur en 1677216
+	else if (keycode == 53) // Touche '4' pour modifier la couleur en 1677216
 		data->color = 1677216;
 	key_hook2(keycode, data);
 	fract_calc(data);
