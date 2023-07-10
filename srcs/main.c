@@ -1,4 +1,5 @@
 #include "../includes/fractol.h"
+#include <unistd.h>
 
 void	fract_calc(t_fractol *data)
 {
@@ -44,7 +45,7 @@ int		fract_comp(char **av, t_fractol *data)
 		data->fract = 2;
 	else
 	{
-		ft_putendl_fd("Usage /fractol \"mandelbrot\", \"julia\", \"burningship\"", 45);
+		write(1,"Usage : ./fractol \"mandelbrot\", \"julia\", \"burningship\"", 54);
 		return (0);
 	}
 	return (1);
@@ -68,7 +69,7 @@ int		main(int ac, char **av)
 		mlx_mouse_hook(data->win, mouse_hook, data);
 		mlx_loop(data->mlx);
 	}
-	else
-		ft_putendl_fd("Usage /fractol \"mandelbrot\", \"julia\", \"burningship\"", 45);
+	else 
+		write(1,"Usage : ./fractol \"mandelbrot\", \"julia\", \"burningship\"", 54);
 	return (0);
 }
