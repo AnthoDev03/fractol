@@ -18,6 +18,7 @@
 # include "../minilibx-linux/mlx.h"
 # include <math.h>
 # include <pthread.h>
+# include <unistd.h>
 # define WIDTH 600
 # define THREAD_WIDTH 5
 # define THREAD_NUMBER 120

@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
-       #include <pthread.h>
-
 
 void	mandelbrot_init(t_fractol *data)
 {

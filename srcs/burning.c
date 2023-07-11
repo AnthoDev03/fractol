@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
-#include <pthread.h>
 
 void	burningship_init(t_fractol *data)
 {

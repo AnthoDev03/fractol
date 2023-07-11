@@ -14,41 +14,36 @@
 
 int	key_hook2(int keycode, t_fractol *data)
 {
-	if (keycode == 50) // Touche '2' pour modifier la couleur en 2050
+	if (keycode == 50)
 		data->color = 2050;
-	else if (keycode == 51) // Touche '3' pour modifier la couleur en 265
+	else if (keycode == 51)
 		data->color = 265;
 	else if (keycode == 52)
-		// Touche '4' pour activer/désactiver le mode "julia_mouse"
 		data->julia_mouse = !data->julia_mouse;
 	else if (keycode == 53)
-		// Touche '5' pour activer/désactiver l'affichage du texte
 		data->show_text = !data->show_text;
 	return (0);
 }
 
 int	key_hook(int keycode, t_fractol *data)
 {
-	if (keycode == 65307) // Touche 'Escape' pour quitter le programme
+	if (keycode == 65307) 
 		exit(1);
 	else if (keycode == 65451)
-		// Touche '+' pour augmenter la valeur de data->it_max de 50
 		data->it_max += 50;
-	else if (keycode == 65453)
-		// Touche '-' pour diminuer la valeur de data->it_max de 50
+	else if (keycode == 6553)
 		data->it_max -= 50;
-	else if (keycode == 65430) // Touche '<-' pour déplacer data->x1 vers la gauche
+	else if (keycode == 65361)
 		data->x1 -= 30 / data->zoom;
-	else if (keycode == 65363) // Touche '->' pour déplacer data->x1 vers la droite
+	else if (keycode == 65363)
 		data->x1 += 30 / data->zoom;
-	else if (keycode == 40)
-		// Touche 'fleceh bas' pour déplacer data->y1 vers le bas
+	else if (keycode == 65364)
 		data->y1 += 30 / data->zoom;
-	else if (keycode == 65431) // Touche '^' pour déplacer data->y1 vers le haut
+	else if (keycode == 65362)
 		data->y1 -= 30 / data->zoom;
-	else if (keycode == 49) // Touche '1' pour réinitialiser le fractal
+	else if (keycode == 49)
 		fract_init(data);
-	else if (keycode == 53) // Touche '4' pour modifier la couleur en 1677216
+	else if (keycode == 53)
 		data->color = 1677216;
 	key_hook2(keycode, data);
 	fract_calc(data);

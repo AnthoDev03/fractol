@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
-       #include <pthread.h>
 
 int	mouse_julia(int x, int y, t_fractol *data)
 {

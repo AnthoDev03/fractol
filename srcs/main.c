@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
-#include <unistd.h>
 
 void	fract_calc(t_fractol *data)
 {
