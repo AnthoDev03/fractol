@@ -32,8 +32,7 @@ void	mandelbrot_calc(t_fractol *data)
 		&& data->it < data->it_max)
 	{
 		data->tmp = data->z_r;
-		data->z_r = data->z_r * data->z_r 
-			- data->z_i * data->z_i + data->c_r;
+		data->z_r = data->z_r * data->z_r - data->z_i * data->z_i + data->c_r;
 		data->z_i = 2 * data->z_i * data->tmp + data->c_i;
 		data->it++;
 	}
@@ -42,6 +41,7 @@ void	mandelbrot_calc(t_fractol *data)
 	else
 		put_pxl_to_img(data, data->x, data->y, (data->color * data->it));
 }
+
 void	mandelbrot(t_fractol *data)
 {
 	data->x = 0;
@@ -57,4 +57,3 @@ void	mandelbrot(t_fractol *data)
 	}
 	mlx_put_image_to_window(data->mlx, data->win, data->img, 0, 0);
 }
-

@@ -44,8 +44,8 @@ void	julia_calc(t_fractol *data)
 		&& data->it < data->it_max)
 	{
 		data->tmp = data->z_r;
-		data->z_r = data->z_r * data->z_r 
-			- data->z_i * data->z_i - 0.8 + (data->c_r / WIDTH);
+		data->z_r = data->z_r * data->z_r - data->z_i * data->z_i - 0.8
+			+ (data->c_r / WIDTH);
 		data->z_i = 2 * data->z_i * data->tmp + data->c_i / WIDTH;
 		data->it++;
 	}
@@ -70,4 +70,3 @@ void	julia(t_fractol *data)
 	}
 	mlx_put_image_to_window(data->mlx, data->win, data->img, 0, 0);
 }
-
