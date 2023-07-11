@@ -17,11 +17,11 @@ void	fract_calc(t_fractol *data)
 	if (data->it_max < 0)
 		data->it_max = 0;
 	if (data->fract == 0)
-		mandelbrot_pthread(data);
+		mandelbrot(data);
 	else if (data->fract == 1)
-		julia_pthread(data);
+		julia(data);
 	else if (data->fract == 2)
-		burningship_pthread(data);
+		burningship(data);
 	if (data->show_text)
 		put_text(data);
 }

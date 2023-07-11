@@ -42,44 +42,19 @@ void	mandelbrot_calc(t_fractol *data)
 	else
 		put_pxl_to_img(data, data->x, data->y, (data->color * data->it));
 }
-
-void	*mandelbrot(void *tab)
+void	mandelbrot(t_fractol *data)
 {
-	t_fractol	*data;
-	int			tmp;
-
-	data = (t_fractol *)tab;
 	data->x = 0;
-	tmp = data->y;
 	while (data->x < WIDTH)
 	{
-		data->y = tmp;
-		while (data->y < data->y_max)
+		data->y = 0;
+		while (data->y < HEIGHT)
 		{
 			mandelbrot_calc(data);
 			data->y++;
 		}
 		data->x++;
 	}
-	return (tab);
-}
-
-void	mandelbrot_pthread(t_fractol *data)
-{
-	t_fractol	tab[THREAD_NUMBER];
-	pthread_t	t[THREAD_NUMBER];
-	int			i;
-
-	i = 0;
-	while (i < THREAD_NUMBER)
-	{
-		ft_memcpy((void *)&tab[i], (void *)data, sizeof(t_fractol));
-		tab[i].y = THREAD_WIDTH * i;
-		tab[i].y_max = THREAD_WIDTH * (i + 1);
-		pthread_create(&t[i], NULL, mandelbrot, &tab[i]);
-		i++;
-	}
-	while (i--)
-		pthread_join(t[i], NULL);
 	mlx_put_image_to_window(data->mlx, data->win, data->img, 0, 0);
 }
+

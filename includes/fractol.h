@@ -20,8 +20,7 @@
 # include <pthread.h>
 # include <unistd.h>
 # define WIDTH 600
-# define THREAD_WIDTH 5
-# define THREAD_NUMBER 120
+# define HEIGHT 600
 
 typedef struct	s_fractol
 {
@@ -59,19 +58,16 @@ int				mouse_hook(int mousecode, int x, int y, t_fractol *data);
 
 void			mandelbrot_init(t_fractol *data);
 void			mandelbrot_calc(t_fractol *data);
-void			*mandelbrot(void *tab);
-void			mandelbrot_pthread(t_fractol *data);
+void			mandelbrot(t_fractol *data);
 
 int				mouse_julia(int x, int y, t_fractol *data);
 void			julia_init(t_fractol *data);
 void			julia_calc(t_fractol *data);
-void			*julia(void *tab);
-void			julia_pthread(t_fractol *data);
+void			julia(t_fractol *data);
 
 void			burningship_init(t_fractol *data);
 void			burningship_calc(t_fractol *data);
-void			*burningship(void *tab);
-void			burningship_pthread(t_fractol *data);
+void			burningship(t_fractol *data);
 
 int				ft_close(void);
 void			put_pxl_to_img(t_fractol *data, int x, int y, int color);
