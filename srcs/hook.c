@@ -27,7 +27,7 @@ int	key_hook2(int keycode, t_fractol *data)
 
 int	key_hook(int keycode, t_fractol *data)
 {
-	if (keycode == 65307) 
+	if (keycode == 65307)
 		exit(1);
 	else if (keycode == 65451)
 		data->it_max += 50;
